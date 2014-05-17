@@ -1,27 +1,97 @@
 <html>
-  <head>
-    <title>Example webrtc.io</title>
-    <link type="text/css" href="/style.css" rel="stylesheet"></link>
+    <head>
+        <title>Face-To-Face</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/chat.css">
+        <script src="webrtc.io.js"></script>
+        <script src="js/firebase.js"></script>
+        <script src="js/RTCMultiConnection-v1.7.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 
-    <script src="/webrtc.io.js"></script>
-  </head>
-  <body onload="init()">
-    <div id="videos">
-      <a href="https://github.com/webRTC"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
-      <video id="you" class="flip" autoplay width="263" height="200" style="position: absolute; left: 0px; bottom: 0px;"></video>
-    </div>
-    <div id="chatbox">
-      <div id="hideShowMessages" class="button">toggle chat</div>
-      <div id="messages">
-      </div>
-      <input id="chatinput" type="text" placeholder="Message:"/>
-    </div>
+        <link type="text/css" href="css/style.css" rel="stylesheet"/>
 
-    <div class="buttonBox">
-      <div id="fullscreen" class="button">Enter Full Screen</div>
-      <div id="newRoom" class="button">Create A New Room</div>
-    </div>
-    
-    <script src="/script.js"></script>
-  </body>
+
+        <script src="js/FileSharing.js"></script>
+    </head>
+    <body onload="init()">
+        <div class="container-fluid">
+            <section id="portfolio">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12"> 
+
+                            <h2>Peer</h2>
+                            <hr class="star-primary">
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-2 col-lg-offset-1 btn-group-vertical">
+                            <div class=""> 
+                                <button class="btn btn-lg btn-block btn-success" id="fullScreenBtn"> Full Screen </button>
+                                <button class="btn btn-lg btn-block btn-success"> Mute </button>
+                                <button class="btn btn-lg btn-block btn-success"> Record Call</button>
+                                <button class="btn btn-lg btn-block btn-danger"> End Call </button> 
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <video id="her" class="flip" autoplay style=""></video>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <header class="top-bar">
+
+                                <div class="left">
+                                    <span class="icon typicons-message"></span>
+                                    <h1>Hangouts</h1>
+                                </div>
+
+                                <div class="right">
+                                    <span class="icon typicons-minus"></span>
+                                    <span class="icon typicons-times"></span>
+                                </div>
+
+                            </header>
+                            <ol id="messages" class="discussion" > 
+                            </ol>
+                            <input id="chatinput" type="text" placeholder=""/>
+                            <input type="file" id="file" disabled>
+                            <div id="file-progress"></div>
+
+                            </section>
+
+
+
+                
+                    <div class="row"> 
+
+                        <div class="col-lg-4"></div>
+                        <div class="btn-group col-lg-4"> 
+
+                            <button class="btn btn-lg btn-danger"> Hang Up </button> 
+                            <button class="btn btn-lg btn-success"> Full Screen</button>
+                            <button class="btn btn-lg btn-success"> Full Screen</button>
+
+                            <div class="col-lg-4"> </div>
+                        </div>
+                    </div>
+
+
+              
+
+
+
+
+
+
+        <script src="js/script.js"></script>
+</div>
+  <!-- Outer Container-->
+</body>
 </html>
